@@ -1,6 +1,19 @@
 console.log("Conectado")
 // Esperar a que el contenido del DOM esté completamente cargado
 
+@media only screen and (max-width: 480px){
+  .sm-0 {
+      /* no imprimirá nada con la clase .sm-0 si el ancho de la pantalla es menor a 480px */
+      display: none;
+   }
+}
+@media only screen and (min-width: 481px){
+  .med-1 {
+      /* todo de clase.med-1 obtendrá el 25% del ancho disponible, si el ancho de la pantalla es mayor a 480px */
+      width: 25%;
+  }
+}
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const videos = document.querySelectorAll(".miVideo");
